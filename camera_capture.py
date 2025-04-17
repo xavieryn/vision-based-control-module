@@ -1,5 +1,7 @@
 """ 
-Simple script to display and write frames from the selected camera using OpenCV
+Simple script to display and write frames from the selected camera using OpenCV.
+
+You save frames by simply pressing "q" on your keyboard.
 """
 import cv2
 
@@ -12,7 +14,7 @@ while True:
     if ret:
         cv2.imshow("frame", frame)
 
-        if cv2.waitKey(1) == ord('q'):
+        if cv2.waitKey(1) == ord('q'): # saves the current frame each time "q" is pressed
             print("Saving to frame.png")
             frame_str = 'calibration_imgs/calibration_img'+str(i)+'.png'
             # frame_str = 'aruco-board-cubes.png'
